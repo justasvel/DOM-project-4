@@ -1,12 +1,10 @@
-let bigger = document.querySelector('#make-bigger');
-let smaller = document.querySelector('#make-smaller');
+let paragraph = document.querySelector('p');
+let header = document.createElement('h2');
+header.textContent = 'Heading';
 
-let img = document.querySelector('img');
+let btn = document.querySelector('.btn');
 
-bigger.addEventListener('click', function() {
-    img.setAttribute('class', 'img-big');
-})
 
-smaller.addEventListener('click', function() {
-    img.setAttribute('class', 'img-small');
-})
+btn.addEventListener('click', function () {
+    paragraph.before(header);
+});
